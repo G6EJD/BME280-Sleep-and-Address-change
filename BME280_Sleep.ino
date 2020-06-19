@@ -34,7 +34,7 @@ void setup() {
 }
 
 void loop() {
-  //BME280_Sleep(sensor_address);                // Now place BME280 into sleep mode
+  BME280_Sleep(sensor_address);                // Now place BME280 into sleep mode
   Serial.println(" ESP32 to Sleep mode...");   // Say going to sleep
   esp_sleep_enable_timer_wakeup(60 * 1000000); // Activate ESP32 sleep mode for 60-seconds
   esp_deep_sleep_start();                      // Now place ESP32 into sleep mode for duration set
